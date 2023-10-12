@@ -5,6 +5,9 @@ import com.airiea.model.resource.Task;
 
 public class TaskUnmarshaller {
     public Task unmarshall(final TaskRecord taskRecord) {
+        if (taskRecord == null) {
+            return null;
+        }
         return Task.builder()
                 .taskId(taskRecord.getTaskId())
                 .entityId(taskRecord.getEntityId())
