@@ -47,10 +47,6 @@ public class AbilityConfig {
     @JsonProperty("response_requirement")
     String responseRequirement;
 
-    @DynamoDBAttribute(attributeName = "knowledge_base_agent_name")
-    @JsonProperty("knowledge_base_agent_name")
-    String knowledgeBaseAgentName;
-
     @DynamoDBAttribute(attributeName = "example_input")
     @JsonProperty("example_input")
     String exampleInput;
