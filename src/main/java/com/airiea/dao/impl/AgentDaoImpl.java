@@ -36,11 +36,30 @@ public class AgentDaoImpl implements AgentDao {
         final AbilityConfig abilityConfigFromDdb = mapper.load(AbilityConfig.class, abilityName);
 
         if (abilityConfigFromDdb == null) {
-            throw new IllegalArgumentException("Agent ability no found.");
+            throw new IllegalArgumentException("Agent ability not found.");
         }
 
         mapper.save(agentConfig);
     }
+    @Override
+    public void updateAgent(Agent agent) {
+        final AgentConfig agentConfig = agentConfigUnmarshaller.unmarshall(agent);
+        final AgentConfig agentConfigFromDdb = mapper.load(agentConfig);
+
+        if (agentConfigFromDdb == null) {
+            throw new IllegalArgumentException("Agent not found.");
+        }
+
+        final String abilityName = agent.getAbilityName();
+        final AbilityConfig abilityConfigFromDdb = mapper.load(AbilityConfig.class, abilityName);
+
+        if (abilityConfigFromDdb == null) {
+            throw new IllegalArgumentException("Agent ability not found.");
+        }
+
+        mapper.save(agentConfig);
+    }
+
 
     @Override
     public Agent getAgentByName(String agentName) {

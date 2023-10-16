@@ -14,8 +14,6 @@ public class AgentConfigUnmarshaller {
                 .abilityName(agent.getAbilityName())
                 .agentGoal(agent.getAgentGoal())
                 .agentRole(agent.getAgentRole())
-                .createdDate(agent.getCreatedDate())
-                .updatedDate(agent.getUpdatedDate())
                 .build();
     }
 
