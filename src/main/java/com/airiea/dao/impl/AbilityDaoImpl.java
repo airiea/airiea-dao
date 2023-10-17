@@ -41,6 +41,18 @@ public class AbilityDaoImpl implements AbilityDao {
     }
 
     @Override
+    public void updateAbility(Ability ability) {
+        final AbilityConfig abilityConfig = abilityConfigUnmarshaller.unmarshallFromAbility(ability);
+        final AbilityConfig abilityConfigFromDdb = mapper.load(abilityConfig);
+
+        if (abilityConfigFromDdb == null) {
+            throw new IllegalArgumentException("Ability not found.");
+        }
+
+        mapper.save(abilityConfig);
+    }
+
+    @Override
     public Ability getAbilityByName(String AbilityName) {
         final AbilityConfig AbilityConfig = mapper.load(AbilityConfig.class, AbilityName);
         return abilityUnmarshaller.unmarshallFromAbilityConfig(AbilityConfig);

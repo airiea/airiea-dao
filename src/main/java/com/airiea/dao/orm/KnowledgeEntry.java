@@ -39,9 +39,9 @@ public class KnowledgeEntry {
     @JsonProperty("is_updating")
     Boolean isUpdating;
 
-    @JsonProperty("update_type")
     @DynamoDBTypeConvertedEnum
     @DynamoDBAttribute(attributeName = "update_type")
+    @JsonProperty("update_type")
     UpdateType updateType;
 
     @JsonProperty("update_delimiter")

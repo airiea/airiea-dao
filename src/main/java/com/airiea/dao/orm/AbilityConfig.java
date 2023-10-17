@@ -6,6 +6,7 @@ import com.airiea.model.enums.UpdateType;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConvertedEnum;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,10 +23,12 @@ public class AbilityConfig {
     @JsonProperty("ability_name")
     String abilityName;
 
+    @DynamoDBTypeConvertedEnum
     @DynamoDBAttribute(attributeName = "model_object")
     @JsonProperty("model_object")
     ModelObject modelObject;
 
+    @DynamoDBTypeConvertedEnum
     @DynamoDBAttribute(attributeName = "model")
     @JsonProperty("model")
     Model model;
@@ -63,6 +66,7 @@ public class AbilityConfig {
     @JsonProperty("prompt_format")
     String promptFormat;
 
+    @DynamoDBTypeConvertedEnum
     @DynamoDBAttribute(attributeName = "update_type")
     @JsonProperty("update_type")
     UpdateType updateType;

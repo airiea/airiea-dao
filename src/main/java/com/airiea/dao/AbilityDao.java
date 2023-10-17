@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface AbilityDao {
     void createAbility(Ability ability);
+    void updateAbility(Ability ability);
     Ability getAbilityByName(String abilityName);
     List<Ability> getAllAbilities();
 }
