@@ -22,9 +22,10 @@ public class AbilityUnmarshaller {
                 .temperature(abilityConfig.getTemperature())
                 .description(abilityConfig.getDescription())
                 .responseRequirement(abilityConfig.getResponseRequirement())
+                .responseDelimiter(abilityConfig.getResponseDelimiter())
                 .exampleInput(abilityConfig.getExampleInput())
                 .exampleOutput(abilityConfig.getExampleOutput())
-                .inputFormat(abilityConfig.getInputFormat())
+                .promptFormat(abilityConfig.getPromptFormat())
                 .updateType(abilityConfig.getUpdateType())
                 .updateDelimiter(abilityConfig.getUpdateDelimiter())
                 .build();

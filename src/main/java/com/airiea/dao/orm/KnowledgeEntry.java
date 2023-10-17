@@ -32,10 +32,11 @@ public class KnowledgeEntry {
     @DynamoDBAttribute(attributeName = "content")
     String content;
 
-    @DynamoDBAttribute(attributeName = "vectors")
-    List<Double> vectors;
+    @DynamoDBAttribute(attributeName = "embedding")
+    List<Double> embedding;
 
     @DynamoDBAttribute(attributeName = "is_updating")
+    @JsonProperty("is_updating")
     Boolean isUpdating;
 
     @JsonProperty("update_type")

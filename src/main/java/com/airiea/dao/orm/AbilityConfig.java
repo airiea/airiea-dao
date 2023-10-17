@@ -47,6 +47,10 @@ public class AbilityConfig {
     @JsonProperty("response_requirement")
     String responseRequirement;
 
+    @DynamoDBAttribute(attributeName = "response_delimiter")
+    @JsonProperty("response_delimiter")
+    String responseDelimiter;
+
     @DynamoDBAttribute(attributeName = "example_input")
     @JsonProperty("example_input")
     String exampleInput;
@@ -55,9 +59,9 @@ public class AbilityConfig {
     @JsonProperty("example_output")
     String exampleOutput;
 
-    @DynamoDBAttribute(attributeName = "input_format")
-    @JsonProperty("input_format")
-    String inputFormat;
+    @DynamoDBAttribute(attributeName = "prompt_format")
+    @JsonProperty("prompt_format")
+    String promptFormat;
 
     @DynamoDBAttribute(attributeName = "update_type")
     @JsonProperty("update_type")
