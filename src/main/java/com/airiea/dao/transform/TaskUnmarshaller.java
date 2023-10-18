@@ -3,8 +3,11 @@ package com.airiea.dao.transform;
 import com.airiea.dao.orm.TaskRecord;
 import com.airiea.model.resource.Task;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TaskUnmarshaller {
-    public Task unmarshall(final TaskRecord taskRecord) {
+    public Task unmarshallFromTaskRecord(final TaskRecord taskRecord) {
         if (taskRecord == null) {
             return null;
         }
@@ -23,6 +26,14 @@ public class TaskUnmarshaller {
                 .updatedDate(taskRecord.getUpdatedDate())
                 .createdDate(taskRecord.getCreatedDate())
                 .build();
+    }
+
+    public List<Task> unmarshallFromTaskRecordList(final List<TaskRecord> taskRecordList) {
+        List<Task> taskList = new ArrayList<>();
+        for (TaskRecord taskRecord : taskRecordList) {
+            taskList.add(unmarshallFromTaskRecord(taskRecord));
+        }
+        return taskList;
     }
 
     private static TaskUnmarshaller instance;

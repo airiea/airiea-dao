@@ -1,9 +1,5 @@
 package com.airiea.dao.orm;
 
-import com.airiea.model.enums.Model;
-import com.airiea.model.enums.ModelObject;
-import com.airiea.model.enums.ModelOwner;
-import com.airiea.model.enums.UpdateType;
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

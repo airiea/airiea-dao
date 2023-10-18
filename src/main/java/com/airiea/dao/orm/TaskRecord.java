@@ -26,10 +26,12 @@ public class TaskRecord {
     @JsonProperty("knowledge_id")
     String knowledgeId;
 
+    @DynamoDBIndexHashKey(attributeName = "entity_id", globalSecondaryIndexName = "entity_id-agent_name")
     @DynamoDBAttribute(attributeName = "entity_id")
     @JsonProperty("entity_id")
     String entityId;
 
+    @DynamoDBIndexRangeKey(attributeName = "agent_name", globalSecondaryIndexName = "entity_id-agent_name")
     @DynamoDBAttribute(attributeName = "agent_name")
     @JsonProperty("agent_name")
     String agentName;

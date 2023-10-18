@@ -1,9 +1,7 @@
 package com.airiea.dao.transform;
 
 import com.airiea.dao.orm.AbilityConfig;
-import com.airiea.dao.orm.AgentConfig;
 import com.airiea.model.resource.Ability;
-import com.airiea.model.resource.Agent;
 
 import java.util.ArrayList;
 import java.util.List;

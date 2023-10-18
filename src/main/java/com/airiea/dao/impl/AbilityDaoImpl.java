@@ -1,15 +1,10 @@
 package com.airiea.dao.impl;
 
 import com.airiea.dao.AbilityDao;
-import com.airiea.dao.AbilityDao;
 import com.airiea.dao.orm.AbilityConfig;
-import com.airiea.dao.orm.AbilityConfig;
-import com.airiea.dao.orm.AgentConfig;
 import com.airiea.dao.transform.AbilityConfigUnmarshaller;
 import com.airiea.dao.transform.AbilityUnmarshaller;
-import com.airiea.dao.transform.AgentUnmarshaller;
 import com.airiea.model.resource.Ability;
-import com.airiea.model.resource.Agent;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
 

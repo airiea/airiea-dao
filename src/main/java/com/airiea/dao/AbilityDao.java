@@ -1,7 +1,6 @@
 package com.airiea.dao;
 
 import com.airiea.model.resource.Ability;
-import com.airiea.model.resource.Agent;
 
 import java.util.List;
 
