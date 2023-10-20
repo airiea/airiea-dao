@@ -38,4 +38,5 @@ public class TaskDaoImpl implements TaskDao {
         final List<TaskRecord> taskRecordList = mapper.query(TaskRecord.class, queryExpression);
         return taskUnmarshaller.unmarshallFromTaskRecordList(taskRecordList);
     }
+
 }

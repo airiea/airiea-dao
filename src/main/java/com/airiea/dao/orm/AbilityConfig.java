@@ -33,7 +33,7 @@ public class AbilityConfig {
     @JsonProperty("model")
     Model model;
 
-    @DynamoDBAttribute(attributeName = "ability_type")
+    @DynamoDBAttribute(attributeName = "max_tokens")
     @JsonProperty("max_tokens")
     Integer maxTokens;
 
